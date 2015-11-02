@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6gT-JW-fM1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Countries-->
+        <scene sceneID="byA-nD-8KC">
+            <objects>
+                <collectionViewController id="fyE-3U-wdK" customClass="CountriesCollectionViewController" customModule="Airport_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ywA-LC-XtL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tp9-Sx-TQr">
+                            <size key="itemSize" width="64" height="63"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yzQ-1t-hQq">
+                            <rect key="frame" x="0.0" y="-64" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CountriesCollectionViewCell" id="Ecj-9O-tGN" customClass="CountriesCollectionViewCell" customModule="Airport_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="64" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="64" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a grey circle" translatesAutoresizingMaskIntoConstraints="NO" id="jZD-Ve-lSL">
+                                            <rect key="frame" x="8" y="8" width="48" height="47"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlz-4E-Eib">
+                                            <rect key="frame" x="14" y="21" width="37" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="jZD-Ve-lSL" firstAttribute="top" secondItem="Ecj-9O-tGN" secondAttribute="topMargin" id="59H-2B-If2"/>
+                                    <constraint firstItem="rlz-4E-Eib" firstAttribute="centerY" secondItem="Ecj-9O-tGN" secondAttribute="centerY" id="XLb-1s-Jyj"/>
+                                    <constraint firstItem="rlz-4E-Eib" firstAttribute="leading" secondItem="Ecj-9O-tGN" secondAttribute="leadingMargin" constant="6" id="XeP-Ko-xCs"/>
+                                    <constraint firstItem="rlz-4E-Eib" firstAttribute="centerX" secondItem="Ecj-9O-tGN" secondAttribute="centerX" id="jxW-XE-98v"/>
+                                    <constraint firstItem="jZD-Ve-lSL" firstAttribute="centerY" secondItem="rlz-4E-Eib" secondAttribute="centerY" id="oqI-Cn-hS0"/>
+                                    <constraint firstItem="jZD-Ve-lSL" firstAttribute="centerX" secondItem="rlz-4E-Eib" secondAttribute="centerX" id="qQI-PM-rEm"/>
+                                    <constraint firstItem="jZD-Ve-lSL" firstAttribute="leading" secondItem="Ecj-9O-tGN" secondAttribute="leadingMargin" id="tPm-76-quC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="countryLbl" destination="rlz-4E-Eib" id="5Wd-Ri-ECr"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="fyE-3U-wdK" id="p0X-2h-wWo"/>
+                            <outlet property="delegate" destination="fyE-3U-wdK" id="znR-aX-6UT"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Countries" id="SCK-89-7ST"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyH-nz-a7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="-58"/>
+        </scene>
+        <!--Airport Summary View Controller-->
+        <scene sceneID="LYS-P6-pNy">
+            <objects>
+                <viewController id="67I-AZ-maL" customClass="AirportSummaryViewController" customModule="Airport_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SSP-Fe-XQ9"/>
+                        <viewControllerLayoutGuide type="bottom" id="a2U-Zy-qVw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wXY-cR-ac1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwx-7q-8mf">
+                                <rect key="frame" x="511" y="527" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve0-mR-q92">
+                                <rect key="frame" x="431" y="527" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrG-wt-j1c">
+                                <rect key="frame" x="14" y="527" width="290" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5nU-7o-csf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="455"/>
+                                <connections>
+                                    <outlet property="delegate" destination="67I-AZ-maL" id="nUQ-Xu-gti"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5nU-7o-csf" firstAttribute="leading" secondItem="wXY-cR-ac1" secondAttribute="leadingMargin" constant="-20" id="4Gf-Kk-f8d"/>
+                            <constraint firstItem="Ve0-mR-q92" firstAttribute="top" secondItem="5nU-7o-csf" secondAttribute="bottom" constant="8" id="Gra-Ak-gO3"/>
+                            <constraint firstItem="5nU-7o-csf" firstAttribute="centerY" secondItem="wXY-cR-ac1" secondAttribute="centerY" constant="-8" id="Hj9-eh-J9h"/>
+                            <constraint firstItem="Dwx-7q-8mf" firstAttribute="top" secondItem="5nU-7o-csf" secondAttribute="bottom" constant="8" id="M9P-ix-yah"/>
+                            <constraint firstItem="5nU-7o-csf" firstAttribute="top" secondItem="SSP-Fe-XQ9" secondAttribute="bottom" id="MhD-ON-DHH"/>
+                            <constraint firstItem="Dwx-7q-8mf" firstAttribute="trailing" secondItem="wXY-cR-ac1" secondAttribute="trailing" constant="-13" id="T98-vB-hSz"/>
+                            <constraint firstItem="Dwx-7q-8mf" firstAttribute="leading" secondItem="Ve0-mR-q92" secondAttribute="trailing" constant="8" id="T9G-19-n7k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5nU-7o-csf" secondAttribute="trailing" constant="-20" id="WUi-ql-J9w"/>
+                            <constraint firstItem="5nU-7o-csf" firstAttribute="centerX" secondItem="wXY-cR-ac1" secondAttribute="centerX" id="XnW-ZU-1dd"/>
+                            <constraint firstItem="HrG-wt-j1c" firstAttribute="top" secondItem="5nU-7o-csf" secondAttribute="bottom" constant="8" id="eRa-cy-xMI"/>
+                            <constraint firstItem="HrG-wt-j1c" firstAttribute="trailing" secondItem="wXY-cR-ac1" secondAttribute="centerX" constant="4" id="gLR-OQ-MUj"/>
+                            <constraint firstItem="HrG-wt-j1c" firstAttribute="leading" secondItem="wXY-cR-ac1" secondAttribute="leading" constant="14" id="mhF-av-Sr4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblAirportName" destination="HrG-wt-j1c" id="1K4-51-BCo"/>
+                        <outlet property="lblDistance" destination="Dwx-7q-8mf" id="uJK-jm-I46"/>
+                        <outlet property="mapDetail" destination="5nU-7o-csf" id="IMH-Mw-bDE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ye-rL-Ow2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="617"/>
+        </scene>
+        <!--Airports-->
+        <scene sceneID="0kk-r9-Fo1">
+            <objects>
+                <tableViewController id="kx4-a8-BSA" customClass="AirportTableViewController" customModule="Airport_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zax-jD-Qz4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="search" id="p3d-au-kWk">
+                            <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="kx4-a8-BSA" id="ZKX-vT-Fct"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AirportTableViewCell" rowHeight="70" id="UaI-Sb-FaL" customClass="AirportTableViewCell" customModule="Airport_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="136" width="600" height="70"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UaI-Sb-FaL" id="LVK-Cq-A40">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5T-R9-ngb">
+                                            <rect key="frame" x="570" y="0.0" width="22" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Y5T-R9-ngb" secondAttribute="height" multiplier="22:21" id="14F-tk-kLd"/>
+                                                <constraint firstAttribute="width" constant="22" id="bRB-Ay-M6i"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkH-bO-xay">
+                                            <rect key="frame" x="8" y="8" width="554" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport municipality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfB-oh-lMb">
+                                            <rect key="frame" x="8" y="40" width="149" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SfB-oh-lMb" firstAttribute="leading" secondItem="LVK-Cq-A40" secondAttribute="leading" constant="8" id="ARW-E7-xzm"/>
+                                        <constraint firstItem="gkH-bO-xay" firstAttribute="leading" secondItem="LVK-Cq-A40" secondAttribute="leadingMargin" id="Jnk-hF-XUr"/>
+                                        <constraint firstItem="gkH-bO-xay" firstAttribute="centerY" secondItem="LVK-Cq-A40" secondAttribute="centerY" constant="-16" id="Qyh-y8-nuX"/>
+                                        <constraint firstItem="Y5T-R9-ngb" firstAttribute="leading" secondItem="gkH-bO-xay" secondAttribute="trailing" constant="8" id="Rci-GR-dUB"/>
+                                        <constraint firstItem="Y5T-R9-ngb" firstAttribute="top" secondItem="LVK-Cq-A40" secondAttribute="top" id="UCt-Ic-nX7"/>
+                                        <constraint firstItem="gkH-bO-xay" firstAttribute="leading" secondItem="LVK-Cq-A40" secondAttribute="leading" constant="8" id="a6t-XS-VhK"/>
+                                        <constraint firstItem="SfB-oh-lMb" firstAttribute="centerY" secondItem="LVK-Cq-A40" secondAttribute="centerY" constant="16" id="hQE-LI-GTO"/>
+                                        <constraint firstItem="Y5T-R9-ngb" firstAttribute="trailing" secondItem="LVK-Cq-A40" secondAttribute="trailingMargin" id="sQV-Yy-1Vk"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="airportMunicipalityLbl" destination="SfB-oh-lMb" id="IE8-4F-WAs"/>
+                                    <outlet property="airportNameLbl" destination="gkH-bO-xay" id="qjw-Dj-Hjz"/>
+                                    <outlet property="isoLbl" destination="Y5T-R9-ngb" id="Pdd-1d-wiW"/>
+                                    <segue destination="67I-AZ-maL" kind="show" id="kZe-kn-WE5"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kx4-a8-BSA" id="mLt-mF-sIK"/>
+                            <outlet property="delegate" destination="kx4-a8-BSA" id="jcQ-zf-0Ka"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Airports" id="a8y-dk-zDc">
+                        <barButtonItem key="rightBarButtonItem" title="Countries" id="LEd-92-vOG">
+                            <connections>
+                                <segue destination="fyE-3U-wdK" kind="show" id="cbB-L8-Udd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="BzR-Oy-kxO" id="aEE-R4-Vfc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oQv-o0-NLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="BzR-Oy-kxO">
+                    <connections>
+                        <outlet property="delegate" destination="kx4-a8-BSA" id="2Ro-0W-Z49"/>
+                        <outlet property="searchBar" destination="p3d-au-kWk" id="ayQ-Pp-uOi"/>
+                        <outlet property="searchContentsController" destination="kx4-a8-BSA" id="O18-Qr-Bkm"/>
+                        <outlet property="searchResultsDataSource" destination="kx4-a8-BSA" id="hZt-ht-pf3"/>
+                        <outlet property="searchResultsDelegate" destination="kx4-a8-BSA" id="oQP-hU-Yjt"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="279" y="260"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gEA-55-6B8">
+            <objects>
+                <navigationController id="6gT-JW-fM1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2qN-Ux-UVo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kx4-a8-BSA" kind="relationship" relationship="rootViewController" id="L6d-e2-QMe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIY-BN-HOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-613" y="260"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="a grey circle" width="200" height="200"/>
+    </resources>
+</document>
